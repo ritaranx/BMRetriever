@@ -19,7 +19,7 @@ Below is a table that outlines the various parameters and configurations for the
 | **Link** |    [BMRetriever/BMRetriever-410M](https://huggingface.co/BMRetriever/BMRetriever-410M)   |  [BMRetriever/BMRetriever-1B](https://huggingface.co/BMRetriever/BMRetriever-1B)    |  [BMRetriever/BMRetriever-2B](https://huggingface.co/BMRetriever/BMRetriever-2B)     |    [BMRetriever/BMRetriever-7B](https://huggingface.co/BMRetriever/BMRetriever-7B)         |
 
 
-## References
+### References
 
 1. **Pythia** - [Pythia](https://huggingface.co/models?other=pythia)
 2. **Gemma** - [Gemma](https://huggingface.co/google/gemma-2b)
@@ -98,3 +98,6 @@ print(scores.tolist())
 
 ## Citation
 Coming Soon!
+
+## Acknowledgement
+We would like to thank the authors from E5-Mistral and Tevatron for the open-sourcing efforts.
