@@ -2,7 +2,7 @@
 
 This model has been finetuned following the approach described in the paper **BMRetriever: Tuning Large Language Models as Better Biomedical Text Retrievers**. The associated HuggingFace repository is available here https://huggingface.co/BMRetriever.
 
-This model has 410M parameters. See the paper [link]() for details.
+See the paper [link]() for details.
 
 
 ## Model Specifications
@@ -16,6 +16,8 @@ Below is a table that outlines the various parameters and configurations for the
 | **Embedding Dim.** | 1024      | 2048         | 2048         | 4096             |
 | **Avg. Perf. on 5 Retrieval Tasks** |    0.574   |  0.596    |   0.600     |    0.610         |
 | **Avg. Perf. on 6 Retrieval Applications** |     0.725  |     0.741    |     0.775    |  0.793         |
+| **Link** |    [BMRetriever/BMRetriever-410M](https://huggingface.co/BMRetriever/BMRetriever-410M)   |  [BMRetriever/BMRetriever-1B](https://huggingface.co/BMRetriever/BMRetriever-1B)    |  [BMRetriever/BMRetriever-2B](https://huggingface.co/BMRetriever/BMRetriever-2B)     |    [BMRetriever/BMRetriever-7B](https://huggingface.co/BMRetriever/BMRetriever-7B)         |
+
 
 ## References
 
@@ -24,7 +26,7 @@ Below is a table that outlines the various parameters and configurations for the
 3. **BioMistral** - [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B)
 
 
-## Usage
+## Model Usage
 
 Pre-trained models can be loaded through the HuggingFace transformers library:
 
