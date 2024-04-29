@@ -25,6 +25,8 @@ Below is a table that outlines the various parameters and configurations for the
 2. **Gemma** - [Gemma](https://huggingface.co/google/gemma-2b)
 3. **BioMistral** - [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B)
 
+## Overview
+[!](teaser/overview.pdf)
 
 ## Model Usage
 
