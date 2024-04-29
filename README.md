@@ -26,7 +26,7 @@ Below is a table that outlines the various parameters and configurations for the
 3. **BioMistral** - [BioMistral](https://huggingface.co/BioMistral/BioMistral-7B)
 
 ## Overview
-[](teaser/overview.pdf)
+![framework](teaser/overview.pdf)
 
 ## Model Usage
 
