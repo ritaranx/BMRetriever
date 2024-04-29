@@ -1,6 +1,6 @@
 # BMRetriever
 
-This model has been finetuned following the approach described in the paper **BMRetriever: Tuning Large Language Models as Better Biomedical Text Retrievers**. The associated HuggingFace repository is available here https://huggingface.co/BMRetriever.
+This is the model and data for the paper **BMRetriever: Tuning Large Language Models as Better Biomedical Text Retrievers**. The associated HuggingFace repository is available here https://huggingface.co/BMRetriever.
 
 See the paper [link]() for details.
 
