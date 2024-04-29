@@ -96,6 +96,11 @@ scores = (embeddings[:2] @ embeddings[2:].T)
 print(scores.tolist())
 ```
 
+## Data Usage
+We have also made available the instruction fine-tuning dataset to aid in reproducibility. This dataset encompasses a range of biomedical tasks with varying levels of detail. It includes sentence-level tasks such as medical natural language inference (MedNLI) and medical question pairs, as well as passage-level biomedical QA tasks like MedMCQA, StackExchange, and medical dialogues. Additionally, we have included several general-domain retrieval datasets, such as MS MARCO, NQ, Fever, ELI5, and NLI, to improve the model's capacity for relevance estimation.
+
+The total volume of data is around 1.4M pairs. The data is available at [huggingface](https://huggingface.co/datasets/BMRetriever/biomed_retrieval_dataset).
+
 ## Citation
 Coming Soon!
 
