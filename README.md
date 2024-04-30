@@ -2,7 +2,7 @@
 
 This is the model and data for the paper **BMRetriever: Tuning Large Language Models as Better Biomedical Text Retrievers**. The associated HuggingFace repository is available here https://huggingface.co/BMRetriever.
 
-See the paper [link]() for details.
+See the paper [link](https://arxiv.org/abs/2404.18443) for details.
 
 
 ## Model Specifications
