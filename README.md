@@ -104,7 +104,17 @@ We have also made available the instruction fine-tuning dataset to aid in reprod
 The total volume of data is around 1.4M pairs. The data is also available at [huggingface](https://huggingface.co/datasets/BMRetriever/biomed_retrieval_dataset). Note that for each query, the negative is mined by sampling over the top 100 documents using E5 that do not appear in positive documents.
 
 ## Citation
-Coming Soon!
+If you find this repository helpful, please kindly consider citing the corresponding paper. Thanks!
+```
+@misc{xu2024bmretriever,
+      title={BMRetriever: Tuning Large Language Models as Better Biomedical Text Retrievers}, 
+      author={Ran Xu and Wenqi Shi and Yue Yu and Yuchen Zhuang and Yanqiao Zhu and May D. Wang and Joyce C. Ho and Chao Zhang and Carl Yang},
+      year={2024},
+      eprint={2404.18443},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
 ## Acknowledgement
 We would like to thank the authors from E5-Mistral and Tevatron for the open-sourcing efforts.
