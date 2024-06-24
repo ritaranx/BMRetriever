@@ -49,7 +49,7 @@ class SentenceBERT:
         self.sep = sep
         self.task = 'Given a scientific claim, retrieve documents that support or refute the claim'
         
-        self.model = AutoModel.from_pretrained(model_path, device_map="auto", torch_dtype=torch.float32, cache_dir="/localscratch/yueyu/cache")
+        self.model = AutoModel.from_pretrained(model_path, device_map="auto")
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.max_length = 512
         if self.tokenizer.pad_token is None:
