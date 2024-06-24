@@ -4,6 +4,7 @@ This is the model and data for the paper **BMRetriever: Tuning Large Language Mo
 
 See the paper [link](https://arxiv.org/abs/2404.18443) for details.
 
+**Update on 06/24/24**: We have added a script `eval.py` for reproducing our experimental results on BEIR benchmarks. We have also provided the prompt (instructions) we used in experiments in `prompt.py`.
 
 ## Model Specifications
 
@@ -51,17 +52,18 @@ from transformers import AutoTokenizer, AutoModel
 
 def last_token_pool(last_hidden_states: Tensor,
                  attention_mask: Tensor) -> Tensor:
+    last_hidden = last_hidden_states.masked_fill(~attention_mask[..., None].bool(), 0.0)
     left_padding = (attention_mask[:, -1].sum() == attention_mask.shape[0])
     if left_padding:
-        return last_hidden_states[:, -1]
+        embedding = last_hidden[:, -1]
     else:
         sequence_lengths = attention_mask.sum(dim=1) - 1
-        batch_size = last_hidden_states.shape[0]
-        return last_hidden_states[torch.arange(batch_size, device=last_hidden_states.device), sequence_lengths]
-
-
+        batch_size = last_hidden.shape[0]
+        embedding = last_hidden[torch.arange(batch_size, device=last_hidden.device), sequence_lengths]
+    return embedding
+    
 def get_detailed_instruct_query(task_description: str, query: str) -> str:
-    return f'Instruct: {task_description}\nQuery: {query}'
+    return f'{task_description}\nQuery: {query}'
 
 def get_detailed_instruct_passage(passage: str) -> str:
     return f'Represent this passage\npassage: {passage}'
@@ -83,7 +85,11 @@ input_texts = queries + documents
 max_length = 512
 
 # Tokenize the input texts
-batch_dict = tokenizer(input_texts, max_length=max_length, padding=True, truncation=True, return_tensors='pt')
+batch_dict = tokenizer(input_texts, max_length=max_length-1, padding=True, truncation=True, return_tensors='pt')
+
+# Important! Adding EOS token at the end
+batch_dict['input_ids'] = [input_ids + [tokenizer.eos_token_id] for input_ids in batch_dict['input_ids']]
+batch_dict = tokenizer.pad(batch_dict, padding=True, return_attention_mask=True, return_tensors='pt').to("cuda")
 
 model.eval()
 with torch.no_grad():
