@@ -4,7 +4,7 @@ This is the model and data for the paper **BMRetriever: Tuning Large Language Mo
 
 See the paper [link](https://arxiv.org/abs/2404.18443) for details.
 
-**Update on 06/24/24**: We have added a script `eval.py` for reproducing our experimental results on BEIR benchmarks. We have also provided the prompt (instructions) we used in experiments in `prompt.py`.
+**Update on 06/24/24**: We have added a script `eval.py` for reproducing our experimental results on BEIR benchmarks. We have also provided the prompt (instructions) we used in experiments in `prompt.py`. Please use `torchrun --nproc-per-node=1 eval.py` for running the code.
 
 ## Model Specifications
 
