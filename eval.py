@@ -40,9 +40,11 @@ def last_token_pool(last_hidden_states: Tensor, attention_mask: Tensor) -> Tenso
         embedding = last_hidden[torch.arange(batch_size, device=last_hidden.device), sequence_lengths]
     return embedding
 
+# The prompt for queries
 def get_detailed_instruct_query(task_description: str, query: str) -> str:
     return f'{task_description}\nQuery: {query}'
 
+# The prompt for passages
 def get_detailed_instruct_passage(passage: str) -> str:
     return f'Represent this passage\npassage: {passage}'
 
