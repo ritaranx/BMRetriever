@@ -52,7 +52,7 @@ class SentenceBERT:
         self.task = 'Given a scientific claim, retrieve documents that support or refute the claim'
         self.dataset = dataset
         self.model_path = model_path
-        self.model = AutoModel.from_pretrained(model_path, torch_dtype=torch.float32, cache_dir="/localscratch/yueyu/cache")
+        self.model = AutoModel.from_pretrained(model_path, torch_dtype=torch.float32)
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.gpu_count = torch.cuda.device_count()
         if self.gpu_count > 1:
