@@ -112,13 +112,11 @@ The total volume of data is around 1.4M pairs. The data is also available at [hu
 ## Citation
 If you find this repository helpful, please kindly consider citing the corresponding paper. Thanks!
 ```
-@misc{xu2024bmretriever,
-      title={BMRetriever: Tuning Large Language Models as Better Biomedical Text Retrievers}, 
-      author={Ran Xu and Wenqi Shi and Yue Yu and Yuchen Zhuang and Yanqiao Zhu and May D. Wang and Joyce C. Ho and Chao Zhang and Carl Yang},
-      year={2024},
-      eprint={2404.18443},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{xu2024bmretriever,
+  title={Bmretriever: Tuning large language models as better biomedical text retrievers},
+  author={Xu, Ran and Shi, Wenqi and Yu, Yue and Zhuang, Yuchen and Zhu, Yanqiao and Wang, May D and Ho, Joyce C and Zhang, Chao and Yang, Carl},
+  journal={arXiv preprint arXiv:2404.18443},
+  year={2024}
 }
 ```
 
