@@ -1,9 +1,10 @@
 # BMRetriever
 
-This is the model and data for the paper **BMRetriever: Tuning Large Language Models as Better Biomedical Text Retrievers**. The associated HuggingFace repository is available here https://huggingface.co/BMRetriever.
+This is the model and data for our EMNLP 2024 paper **BMRetriever: Tuning Large Language Models as Better Biomedical Text Retrievers**. The associated HuggingFace repository is available here https://huggingface.co/BMRetriever.
 
 See the paper [link](https://arxiv.org/abs/2404.18443) for details.
 
+**Update on 09/20/24**: Our paper has been accepted to EMNLP 2024 Main Conference!
 **Update on 06/24/24**: We have added a script `eval.py` for reproducing our experimental results on BEIR benchmarks. We have also provided the prompt (instructions) we used in experiments in `prompt.py`. Please use `torchrun --nproc-per-node=1 eval.py` for running the code.
 
 ## Model Specifications
